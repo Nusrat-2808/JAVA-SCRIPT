@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>The answer of 30/6 is-</h3><br>
+    a)3 <br>
+    b)5 <br>
+    c)6 <br>
+    d)9 <br>
+    <button onclick="ans(30,6)">Click me</button><br>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        function product(a,b){
+            document.write("Product of "+a+" & "+b+" is "+a*b)
+        }
+        function br(){
+            document.write("<br>")
+        }
+        function ans(p,q){
+            document.write("The correct answer is "+p/q)
+        }
+        var result= function(x,y){return x-y}
+        product(3,4)
+        br()
+        product(5,6)
+        br()
+        document.write(result(43,18)) 
+        br()
+        var a=2
+        function diff(){
+            var b=16
+            document.getElementById("demo1").innerHTML=b-a
+        }
+        diff()
+        document.getElementById("demo").innerHTML=a
+        document.getElementById("demo2").innerHTML=b
+    </script>
+</body>
+</html>
