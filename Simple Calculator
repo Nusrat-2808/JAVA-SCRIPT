@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    .col{
+        border: 5px solid black;
+        font-weight: bold;
+        text-align: center;
+    }
+    #C1{
+        background-color: beige;
+    }
+    #C2{
+        background-color: beige;
+    }
+    #C3{
+        background-color: beige;
+    }
+    #C4{
+        background-color: beige;
+    }
+    #C5{
+        background-color: beige;
+    }
+</style>
+</head>
+<body>
+    <h1 class="jumbotron text-center">CALCULATOR</h1>
+    <div class="container">
+        <div class="row">
+            <div id="A1" class="col col-sm-3 col-md-3 col-lg-3">1st number:</div>
+            <div class="col col-sm-3 col-md-3 col-lg-3">+</div>
+            <div id="B1" class="col col-sm-3 col-md-3 col-lg-3">2nd number:</div>
+            <div id="C1" class="col col-sm-3 col-md-3 col-lg-3">Result</div>
+        </div><br>
+        <div class="row">
+            <div id="A2" class="col col-sm-3 col-md-3 col-lg-3">1st number:</div>
+            <div class="col col-sm-3 col-md-3 col-lg-3">-</div>
+            <div id="B2" class="col col-sm-3 col-md-3 col-lg-3">2nd number:</div>
+            <div id="C2" class="col col-sm-3 col-md-3 col-lg-3">Result</div>
+        </div><br>
+        <div class="row">
+            <div id="A3" class="col col-sm-3 col-md-3 col-lg-3">1st number:</div>
+            <div class="col col-sm-3 col-md-3 col-lg-3">*</div>
+            <div id="B3" class="col col-sm-3 col-md-3 col-lg-3">2nd number:</div>
+            <div id="C3" class="col col-sm-3 col-md-3 col-lg-3">Result</div>
+        </div><br>
+        <div class="row">
+            <div id="A4" class="col col-sm-3 col-md-3 col-lg-3">1st number:</div>
+            <div class="col col-sm-3 col-md-3 col-lg-3">/</div>
+            <div id="B4" class="col col-sm-3 col-md-3 col-lg-3">2nd number:</div>
+            <div id="C4" class="col col-sm-3 col-md-3 col-lg-3">Result</div>
+        </div><br>
+        <div class="row">
+            <div id="A5" class="col col-sm-3 col-md-3 col-lg-3">1st number:</div>
+            <div class="col col-sm-3 col-md-3 col-lg-3">%</div>
+            <div id="B5" class="col col-sm-3 col-md-3 col-lg-3">2nd number:</div>
+            <div id="C5" class="col col-sm-3 col-md-3 col-lg-3">Result</div>
+        </div><br>
+    </div>
+    <script>
+        var a=25
+        var b=5
+        document.getElementById("A1").innerHTML=a
+        document.getElementById("B1").innerHTML=b
+        document.getElementById("C1").innerHTML="="+(a+b)
+        document.getElementById("A2").innerHTML=a
+        document.getElementById("B2").innerHTML=b
+        document.getElementById("C2").innerHTML="="+(a-b)
+        document.getElementById("A3").innerHTML=a
+        document.getElementById("B3").innerHTML=b
+        document.getElementById("C3").innerHTML="="+(a*b)
+        document.getElementById("A4").innerHTML=a
+        document.getElementById("B4").innerHTML=b
+        document.getElementById("C4").innerHTML="="+(a/b)
+        document.getElementById("A5").innerHTML=a
+        document.getElementById("B5").innerHTML=b
+        document.getElementById("C5").innerHTML="="+(a%b)
+    </script>
+</body>
+</html>
