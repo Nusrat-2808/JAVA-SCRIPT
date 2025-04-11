@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(192, 109, 109);
+        }
+    </style>
+</head>
+<body>
+    <h1>JAVASCRIPT string methods</h1>
+    <p>Basic methods</p>
+    <h1>Loops in JS</h1>
+    <p id="loops"></p>
+    <h1>Switch in JS</h1>
+    <p id="demo"></p>
+    <script>
+        var str="eXTraOrDinAry";
+        document.write(str.toUpperCase());
+        document.write("<br>");
+        document.write(str.toLowerCase());
+        document.write("<br>");
+        document.write(str.startsWith("e"));
+        document.write("<br>");
+        var str1="This part is about methods in JS";
+        var patt=new RegExp("method");
+        var res=patt.test(str1);
+        document.write(res);
+        document.write("<br>");
+        for(x=1;x<101;x++){
+            document.write(x+"<br>")
+        };
+        var day;
+        switch(new Date().getDay()){
+            case 0:
+                day="Sunday";
+                break;
+            case 1:
+                day="Monday";
+                break;
+            case 2:
+                day="Tuesday";
+                break;
+            case 3:
+                day="Wednesday";
+                break;
+            case 4:
+                day="Thursday";
+                break;
+            case 5:
+                day="Friday";
+                break;
+            case 6:
+                day="Saturday";
+                break;    
+        }
+        document.getElementById("demo").innerHTML="Today is "+ day+"."
+    </script>
+</body>
+</html>
