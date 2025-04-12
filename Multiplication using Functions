@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Let's do some Multiplication Workouts</h2>
+    <h4>(1)The answer of 34*6 is-</h4><br>
+    a)204 <br>
+    b)409 <br>
+    c)420 <br>
+    d)342 <br>
+    <button onclick="product(34,6)">Click to see result</button><br>
+    <h4>(2)The answer of 29*8 is-</h4><br>
+    a)399 <br>
+    b)253 <br>
+    c)232 <br>
+    d)449 <br>
+    <button onclick="product(29,8)">Click to see result</button><br>
+    <h4>(3)The answer of 45*3 is-</h4><br>
+    a)345 <br>
+    b)135 <br>
+    c)165 <br>
+    d)289 <br>
+    <button onclick="product(45,3)">Click to see result</button><br>
+    <h4>(4)The answer of 26*19 is-</h4><br>
+    a)308 <br>
+    b)563 <br>
+    c)629 <br>
+    d)494 <br>
+    <button onclick="product(26,19)">Click to see result</button><br>
+    <h4>(5)The answer of 48*9 is-</h4><br>
+    a)321 <br>
+    b)432 <br>
+    c)368 <br>
+    d)589 <br>
+    <button onclick="product(48,9)">Click to see result</button><br>
+    <script>
+        function product(a,b){
+            document.write("The Product of "+a+" & "+b+" is "+a*b)
+        }
+    </script>
+</body>
+</html>
