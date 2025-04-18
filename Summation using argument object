@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Finding sum</h1>
+    <p>Let some of the numbers be-</p>
+    <p>20,39,26,15,48,9,21,4,63,55,72,59</p>
+    <p>Now let's find (20+39+26+15+48+9+21+4+63+55+72+59) using argument object.</p>
+    <p id="result"></p>
+    <script>
+        function find_sum(){
+            var i;
+            var max=0;
+            var sum;
+            for(i=0;i<arguments.length;i++){
+                sum=max+arguments[i]
+                max=sum
+                }
+            return sum;
+        }
+        document.getElementById("result").innerHTML="Result is "+find_sum(20,39,26,15,48,9,21,4,63,55,72,59)
+    </script>
+</body>
+</html>
