@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Let a random number be <p id="random"></p>
+    and another random integer number be <p id="floor"></p>
+    <script>
+        document.getElementById("random").innerHTML=Math.random()*100
+        function int(){
+            document.getElementById("floor").innerHTML=Math.floor(Math.random()*100)
+        }
+        int()
+        document.write("Now let a specific number be 50. Then the numbers from 1 to 50 are-<br>")
+        var demo=51
+        for(x=1;x<demo;x++){
+            document.write(x+"<br>")
+        }
+        
+    </script>
+</body>
+</html>
