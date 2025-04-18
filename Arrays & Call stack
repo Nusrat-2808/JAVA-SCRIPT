@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+    <p id="array1"></p>
+    <h1>join() & pop() method</h1>
+    <p id="firstjoin"></p>
+    <p id="pop1"></p>
+    <p id="pop2"></p>
+    <p id="pop3"></p>
+    <p id="pop4"></p>
+    <h1>Call Stack</h1>
+    <p id="call-stack"></p>
+    <script>
+        var river=["Padma","Meghna","Jamuna","Brahmaputra"];
+        document.getElementById("array1").innerHTML= river[3]
+        document.getElementById("firstjoin").innerHTML="The biggest river of Bangladesh is "+river.join("/")
+        document.getElementById("pop1").innerHTML=river;
+        document.getElementById("pop2").innerHTML=river.pop()
+        document.getElementById("pop3").innerHTML=river;river.pop()
+        document.getElementById("pop4").innerHTML=river;
+        function add(a,b){
+            return a+b
+        }
+        function mean(a,b){
+            return add(a,b)/2
+        }
+        let result=mean(20,56)
+        document.getElementById("call-stack").innerHTML="The mean or average of 20 & 56 is "+result+"."
+    </script>
+</body>
+</html>
