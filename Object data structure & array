@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lavenderblush;
+        }
+        h4{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h1>Let's learn aboutEquation & Statistics</h1>
+    <h4>Example-1</h4>
+    <p>Suppose Mina's age is two times that of his brother Tinku.Tinku's age is one-fifth of his father.Their father's age is 50.Now find out the equations regarding their Mina & Tinku's age considering them x & y respectively.</p>
+    <h4>Solution:</h4>
+    <p id="eqn"></p>
+    <h4>Example-2</h4>
+    <p>Let the height of 10 students in cm of your class are- <br>156,154,145,162,158,152,159,153,160,163 <br>Find out the- <br>
+    i)the highest height <br>
+    ii) average of height of the students. <br>
+    iii)If the last two students were not absent what would be the statistics </p>
+    <h4>Solution:</h4>
+    (i) <p id="item"></p>
+    (ii) <p id="join"></p>
+    (iii) <p id="pop"></p>
+    <p id="pop1"></p>
+    <script>
+        var age={
+            Mina:"x",
+            Tinku:"y",
+            father:50
+        }
+        document.getElementById("eqn").innerHTML="The equations from the stem are-<br>"+age.Mina+"=2"+age.Tinku+".......(i)<br>"+age.Tinku+"="+age.father+"/5.......(ii)"
+        var height=[156,154,145,162,158,152,159,153,160,163]
+        document.getElementById("item").innerHTML="The largest height will be "+height[9]+".";
+        document.getElementById("join").innerHTML="The average will be ("+height.join("+")+")/10=156.2 cm"
+        document.getElementById("pop").innerHTML="The previous series -"+height;height.pop();height.pop();
+        document.getElementById("pop1").innerHTML="The series if the last 2 students were absent -"+height;
+
+    </script>
+</body>
+</html>
