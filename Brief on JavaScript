@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(168, 134, 237);
+        }
+    </style>
+</head>
+<body>
+    <h2>Time based greeter using Conditional statements</h2>
+    <p>Click the button to have a greetings message corresponding to your time.</p>
+    <button onclick="timegreeter()">Greet me!</button>
+    <p id="time"></p>
+    <p id="greet"></p>
+    <h2>Using while loop</h2>
+    <p id="num"></p>
+    <h1>Java Script data types</h1>
+    <script>
+        var a=28;
+        var b=20;
+        var c=28;
+        var d=null;
+        var e;//Undefined value or data type
+        document.write("The variable a & b are equal- "+(a==b));
+        document.write("<br>");
+        document.write("The variable a & c are equal- "+(a==c));
+        document.write("<br>");
+        document.write("The variable d is "+d);
+        document.write("<br>");
+        document.write("The variable e is "+e);
+
+        //there must be a ()after function name everywhere//
+        
+        function timegreeter(){
+            var time=new Date().getHours();
+            var greeting;
+            if(time<12){
+                greeting="Good Morning!"
+            }
+            else if(time<15){
+                greeting="Good Noon!"
+            }
+            else if(time<18){
+                greeting="Good Afternoon!"
+            }
+            else{
+                greeting="Good Evening!"
+            }
+            document.getElementById("time").innerHTML="The Current Time is : "+time
+            document.getElementById("greet").innerHTML=greeting
+        }
+        var text="";
+        var i=0;
+        while(i<21){
+            text+="<br>The number is "+i
+            i++
+        }
+        document.getElementById("num").innerHTML=text
+    </script>
+</body>
+</html>
