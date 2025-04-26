@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classes in JS</h1>
+    <p>How to use classes?</p>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <h1>Class Inheritance in JS</h1>
+    <p id="details"></p>
+    <script>
+        class student{
+            //write the constructor
+            constructor(name,year,roll){
+            this.name=name;
+            this.year=year;
+            this.roll=roll;
+            }
+            //creating age method for the class
+            age(){
+                let date= new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        student1=new student("Tathoi",2008,02)
+        student2=new student("Sayeema",2008,03)
+        document.getElementById("student1").innerHTML="My name is "+student1.name+". I was born in "+student1.year+". I am "+student1.age()+" years old. My roll number is "+student1.roll+".<br>"
+        document.getElementById("student2").innerHTML="My name is "+student2.name+". I was born in "+student2.year+". I am "+student2.age()+" years old. My roll number is "+student2.roll+".<br>"
+        class cars{
+            constructor(brand){
+                this.carname=brand
+            }
+            present(){
+                return "I have a "+ this.carname
+            }
+        }
+        class model extends cars{
+            constructor(brand,mod){
+                super(brand)
+                this.model=mod
+            }
+            show(){
+                return this.present()+" and it is a "+this.model+".<br>"
+            }
+        }
+        let myCar=new model("Rolls Royce","Spectre")
+        document.getElementById("details").innerHTML=myCar.show()
+    </script>
+</body>
+</html>
