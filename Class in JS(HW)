@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Classes & Class Inheritance in JavaScript</h1>
+    <p id="list"></p>
+    <p id="stud1"></p>
+    <p id="stud2"></p>
+    <p id="stud3"></p>
+    <p id="stud4"></p>
+    <p id="comp1"></p>
+    <p id="comp2"></p>
+    <script>
+        class student{
+            constructor(name,year,roll){
+                this.name=name;
+                this.year=year;
+                this.roll=roll;
+            }
+            age(){
+                let date=new Date()
+                return date.getFullYear() -this.year
+            }
+        }
+        stud1= new student("Zawata",2009,1)
+        stud2= new student("Tathoi",2008,2)
+        document.getElementById("stud1").innerHTML="My name is "+stud1.name+". I am "+stud1.age()+" years old. My roll number is "+stud1.roll
+        document.getElementById("stud2").innerHTML="My name is "+stud2.name+". I am "+stud2.age()+" years old. My roll number is "+stud2.roll
+        class Std extends student{
+            constructor(name,year,roll,standard){
+                super(name,year,roll)
+                this.class=standard
+            }
+        }
+        stud3=new Std("Sayeema",2008,3,"X(B1)")
+        stud4=new Std("Mahir",2008,3,"x(A)")
+        document.getElementById("stud3").innerHTML="My name is "+stud3.name+". I am "+stud3.age()+" years old. My roll number is "+stud3.roll
+        document.getElementById("stud4").innerHTML="My name is "+stud4.name+". I am "+stud4.age()+" years old. My roll number is "+stud4.roll
+        let comp1=""
+        if(stud2.age()==stud3.age()){
+            comp1=stud2.name+" & "+stud3.name+" are of the same age."
+        }
+        else{
+            comp1=stud2.name+" & "+stud3.name+" are of different age."
+        }
+        let comp2="" 
+        if(stud3.class==stud4.class){
+            comp2=stud2.name+" & "+stud3.name+" are of the same class and section."
+        }
+        else{
+            comp2=stud2.name+" & "+stud3.name+" are from different class and section."
+        }
+        document.getElementById("comp1").innerHTML=comp1
+        document.getElementById("comp2").innerHTML=comp2
+    </script>
+</body>
+</html>
