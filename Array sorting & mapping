@@ -19,6 +19,9 @@
     <button onclick="Ascending()">Ascending order</button>
     <button onclick="Descending()">Descending order</button>
     <p id="result"></p>
+    <p>Multiply every number by 10</p>
+    <p>46,52,89,63</p>
+    <p id="map"></p>
     <script>
         var fruits=["litchi","jackfruit","banana","guava","apple"];
         var newarray=fruits.sort();
@@ -35,6 +38,12 @@
             points.sort(function(a,b){return b-a});
             document.getElementById("result").innerHTML=points;
         }
+        var numbers=[46,52,89,63];
+        function myFunction(num){
+            return num*10
+        }
+        var product=numbers.map(myFunction);
+        document.getElementById("map").innerHTML=product
     </script>
 </body>
 </html>
