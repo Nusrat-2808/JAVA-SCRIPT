@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: mediumslateblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array sorting</h1>
+    <p id="fruit1"></p>
+    <p id="fruit2"></p>
+    <p>Click the button to sort the following numbers in ascending or descending order.</p>
+    <p>30,25,46,52,89,63,4,56,9,100</p>
+    <button onclick="Ascending()">Ascending order</button>
+    <button onclick="Descending()">Descending order</button>
+    <p id="result"></p>
+    <script>
+        var fruits=["litchi","jackfruit","banana","guava","apple"];
+        var newarray=fruits.sort();
+        document.getElementById("fruit1").innerHTML=newarray;
+        var newarray2=newarray.reverse();
+        document.getElementById("fruit2").innerHTML=newarray2;
+        var points= [30,25,46,52,89,63,4,56,9,100];
+        document.getElementById("result").innerHTML=points;
+        function Ascending(){
+            points.sort(function(a,b){return a-b});
+            document.getElementById("result").innerHTML=points;
+        }
+        function Descending(){
+            points.sort(function(a,b){return b-a});
+            document.getElementById("result").innerHTML=points;
+        }
+    </script>
+</body>
+</html>
