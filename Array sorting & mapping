@@ -22,6 +22,7 @@
     <p>Multiply every number by 10</p>
     <p>46,52,89,63</p>
     <p id="map"></p>
+    <h1>Eval() function in Js</h1>
     <script>
         var fruits=["litchi","jackfruit","banana","guava","apple"];
         var newarray=fruits.sort();
@@ -43,7 +44,9 @@
             return num*10
         }
         var product=numbers.map(myFunction);
-        document.getElementById("map").innerHTML=product
+        document.getElementById("map").innerHTML=product;
+        document.write("a+b<br>");
+        document.write(eval("a+b"));
     </script>
 </body>
 </html>
