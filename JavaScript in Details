@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>The JavaScript string() method</h1>
+    <p>The string() method can convert a number to a string</p>
+    <p id="number-result"></p>
+    <p id="string-result"></p>
+    <h1>JavaScript Error Handling</h1>
+    <p>This example demonstrates how to use try and catch to find & display an error.</p>
+    <p id="trial"></p>
+    <p id="trial2"></p>
+    <p id="error-show"></p>
+    <p id="after-error"></p>
+    <p id="result"></p>
+    <h1>Replace function</h1>
+    <p id="text">Hello Everyone!</p>
+    <script>
+        var a=56;
+        var b=92;
+        document.getElementById("number-result").innerHTML=a+b;
+        document.getElementById("string-result").innerHTML=String(a)+String(b);
+        try{
+            var x=40;
+            var y=20;
+            document.getElementById("trial").innerHTML=(x-y)*a;
+            document.getElementById("trial2").innerHTML=x+z;
+        }
+        catch(err){
+            document.getElementById("error-show").innerHTML= err.message;
+        }
+        document.getElementById("after-error").innerHTML="After finding errrors.";
+        add=(p,q)=>p+q;
+        document.getElementById("result").innerHTML="Usage of the add Function-"+add(30,25);
+        document.getElementById("text").innerHTML="Hello Everyone!".replace("Hello","Good Night")
+    </script>
+</body>
+</html>
