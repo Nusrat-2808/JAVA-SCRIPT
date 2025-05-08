@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Sorting & Arranging</h1>
+    <p>Let the marks of 10 students in Class Test out of 20 are-</p>
+    <p>12,19,5,10,16,8,14,15,20,11</p>
+    <p>Then the marks out of 100 or the percentage will be-</p>
+    <p id="result"></p>
+    <p>Arranging the marks in the marksheet in ascending & descending order we get-</p>
+    <button onclick="Ascending()">Ascending order</button>
+    <button onclick="Descending()">Descending order</button>
+    <p id="list"></p>
+    <script>
+        var marks=[12,19,5,10,16,8,14,15,20,11]; 
+        function Mark(num){
+            return num*5
+        }
+        var product=marks.map(Mark)
+        var per=marks.map(Mark).join("%, ")
+        document.getElementById("result").innerHTML=per;
+        function Ascending(){
+            product.sort(function(a,b){return a-b})
+            document.getElementById("list").innerHTML=product
+        }
+        function Descending(){
+            product.sort(function(a,b){return b-a})
+            document.getElementById("list").innerHTML=product
+        }
+    </script>
+</body>
+</html>
