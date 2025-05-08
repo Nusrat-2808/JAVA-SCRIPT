@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trying different types of errors</h1>
+    <p id="trial1"></p>
+    <p id="catch1"></p>
+    <p id="trial2"></p>
+    <p id="catch2"></p>
+    <p id="trial3"></p>
+    <p id="catch3"></p>
+    <p id="trial4"></p>
+    <p id="catch4"></p>
+    <p id="trial5"></p>
+    <p id="catch5"></p>
+    <script>
+        var a=0;
+        var b=6;
+        try{
+            var c=20;
+            var d=15;
+            document.getElementById("trial1").innerHTML=(c+d)*e
+        }
+        catch(err){
+            document.getElementById("catch1").innerHTML= err.message;
+        }
+        try{
+            document.getElementById("trial2").innerHTML=(b*5)/a
+        }
+        catch(err){
+            document.getElementById("catch2").innerHTML= err.message;
+        }
+        try{
+            document.getElementById("trial3").innerHTML="Hello Bangladesh!".replace("England","World")
+        }
+        catch(err){
+            document.getElementById("catch3").innerHTML= err.message;
+        }
+        try{
+            function product(a,b){
+                return a*b
+            }
+            document.getElementById("trial4").innerHTML=product [a,b]
+        }
+        catch(err){
+            document.getElementById("catch4").innerHTML= err.message;
+        }
+        try{
+            add=(a,b)<=a+b
+            document.getElementById("trial5").innerHTML=add(5,6)
+        }
+        catch(err){
+            document.getElementById("catch5").innerHTML= err.message;
+        }
+    </script>
+</body>
+</html>
