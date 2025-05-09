@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: honeydew;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON</h1>
+    <h3>Convert a JS object to json, and send it to the server</h3>
+    <p id="result"></p>
+    <h3>Callback Function</h3>
+    <p>By doing Calculation displaying the result-</p>
+    <p id="display"></p>
+    <script>
+        var myObj={name:"Lahary",age:15,class:"X-B"}
+        var myJSON= JSON.stringify(myObj)//Converts the object to Json format
+        var newObj= JSON.parse(myJSON)//Turning Json format into actual one
+        document.getElementById("result").innerHTML= "Name-->"+newObj.name+"<br>Age-->"+newObj.age+"<br>Class-->"+newObj.class
+        function displayer(value){
+            document.getElementById("display").innerHTML="The sum of 1st & 2nd number is "+ value
+        }
+        function mySum(num1,num2){
+            let sum=num1+num2
+            displayer(sum)
+        }
+        let myPromise= new Promise(function(myResolve,myReject){
+            let x=0
+            if (x==0){
+                myResolve("OK")//when successfull
+            }
+            else{
+                myReject("Error")//when error
+            }
+        })
+        myPromise.then(
+            function(value){sum(5,10)}//code is successful
+        )
+    </script>
+</body>
+</html>
