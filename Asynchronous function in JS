@@ -13,24 +13,27 @@
 <body>
     <h1>Using asynchronous properties in JS</h1>
     <p>Let some mathematical problems be- <br>
-    1)26+43= <button onclick="ans1()">Click here to see the result</button><br>
-    2)49-23= <button onclick="ans2()"></button><br>
-    3)24+43-19= <button onclick="ans3()"></button><br>
-    4)5*22= <button onclick="ans4()"></button> <br>
+    1)26+43= ?<br>
+    2)49-23= ?<br>
+    3)24+43-19= ?<br>
+    4)5*22= ?<br>
     <h3>Result Zone</h3>
-    <b id="Result"></b></p>
+    1)<b id="Result1"></b> <br>
+    2)<b id="Result2"></b> <br>
+    3)<b id="Result3"></b> <br>
+    4)<b id="Result4"></b></p>
     <script>
         function ans1(value){
-            document.getElementById("Result").innerHTML=value
+            document.getElementById("Result1").innerHTML=value
         }
         function ans2(value){
-            document.getElementById("Result").innerHTML=value
+            document.getElementById("Result2").innerHTML=value
         }
         function ans3(value){
-            document.getElementById("Result").innerHTML=value
+            document.getElementById("Result3").innerHTML=value
         }
         function ans4(value){
-            document.getElementById("Result").innerHTML=value
+            document.getElementById("Result4").innerHTML=value
         }
         function sum(num1,num2){
             let sum=num1+num2
@@ -42,8 +45,8 @@
         }
         function sumdiff(num1,num2,num3){
             let sum=num1+num2
-            let diff=sum-num3
-            ans3(diff)
+            let sumdiff=sum-num3
+            ans3(sumdiff)
         }
         function product(num1,num2){
             let product=num1*num2
