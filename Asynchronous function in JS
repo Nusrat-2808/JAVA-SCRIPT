@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using asynchronous properties in JS</h1>
+    <p>Let some mathematical problems be- <br>
+    1)26+43= <button onclick="ans1()">Click here to see the result</button><br>
+    2)49-23= <button onclick="ans2()"></button><br>
+    3)24+43-19= <button onclick="ans3()"></button><br>
+    4)5*22= <button onclick="ans4()"></button> <br>
+    <h3>Result Zone</h3>
+    <b id="Result"></b></p>
+    <script>
+        function ans1(value){
+            document.getElementById("Result").innerHTML=value
+        }
+        function ans2(value){
+            document.getElementById("Result").innerHTML=value
+        }
+        function ans3(value){
+            document.getElementById("Result").innerHTML=value
+        }
+        function ans4(value){
+            document.getElementById("Result").innerHTML=value
+        }
+        function sum(num1,num2){
+            let sum=num1+num2
+            ans1(sum)
+        }
+        function diff(num1,num2){
+            let diff=num1-num2
+            ans2(diff)
+        }
+        function sumdiff(num1,num2,num3){
+            let sum=num1+num2
+            let diff=sum-num3
+            ans3(diff)
+        }
+        function product(num1,num2){
+            let product=num1*num2
+            ans4(product)
+        }
+        sum(26,43)
+        diff(49,23)
+        sumdiff(24,43,19)
+        product(5,22)
+    </script>
+</body>
+</html>
